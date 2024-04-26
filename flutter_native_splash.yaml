@@ -6,4 +6,7 @@ flutter_native_splash:
 
   
   android_12:
-   
+   image: assets/images/android_12_splash.png
+
+
+  
