@@ -26,6 +26,16 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: ColorsManager.darkBlue,
   );
+    static const TextStyle font14BlueSemiBold=TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.mainBlue,
+  );
+    static const TextStyle font15DarkBlueMedium=TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeightHelper.medium,
+    color: ColorsManager.darkBlue,
+  );
 
 
     static const TextStyle font24BlueBold=TextStyle(
