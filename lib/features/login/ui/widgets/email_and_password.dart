@@ -29,11 +29,7 @@ class _PasswordAndEmailState extends State<PasswordAndEmail> {
     passwordController = context.read<LoginCubit>().passwordController;
     setupPasswordControllerListener();
   }
-  @override
-  void dispose() {
-    passwordController.dispose();
-    super.dispose();
-  }
+
 
   void setupPasswordControllerListener() {
       passwordController.addListener(() {
@@ -66,7 +62,7 @@ class _PasswordAndEmailState extends State<PasswordAndEmail> {
           CustomTextFormField(
             controller: context.read<LoginCubit>().passwordController,
             validator: (value) {
-              if (value == null || value.isEmpty || !AppRegex.isEmailValid(value)) {
+              if (value == null || value.isEmpty || !AppRegex.isPasswordValid(value)) {
                 return 'Please enter a valid password';
               }
             },
@@ -93,5 +89,10 @@ class _PasswordAndEmailState extends State<PasswordAndEmail> {
         ],
       ),
     );
+  }
+    @override
+  void dispose() {
+    passwordController.dispose();
+    super.dispose();
   }
 }
