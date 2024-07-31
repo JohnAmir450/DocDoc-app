@@ -1,28 +1,29 @@
 import 'package:doctor_app/core/theming/colors.dart';
 import 'package:doctor_app/core/theming/font_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextStyles {
-  static const TextStyle font24BlackBold = TextStyle(
-    fontSize: 24,
+  static  TextStyle font24BlackBold = TextStyle(
+    fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
 
 
-  static const TextStyle font32BlueBold=TextStyle(
-    fontSize: 32,
+  static  TextStyle font32BlueBold=TextStyle(
+    fontSize: 32.sp,
     fontWeight: FontWeightHelper.bold,
     color: ColorsManager.mainBlue,
   );
-  static const TextStyle font13BlueRegular=TextStyle(
-    fontSize: 13,
+  static  TextStyle font13BlueRegular=TextStyle(
+    fontSize: 13.sp,
     fontWeight: FontWeightHelper.regular,
     color: ColorsManager.mainBlue,
   );
 
-  static const TextStyle font14DarkBlueMedium=TextStyle(
-    fontSize: 14,
+  static  TextStyle font14DarkBlueMedium=TextStyle(
+    fontSize: 14.sp,
     fontWeight: FontWeightHelper.medium,
     color: ColorsManager.darkBlue,
   );

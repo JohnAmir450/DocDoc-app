@@ -16,7 +16,7 @@ class AlreadyHaveAccountText extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(
         children: [
-          const TextSpan(
+           TextSpan(
             text: 'Already have an account?',
             style: TextStyles.font14DarkBlueMedium,
           ),

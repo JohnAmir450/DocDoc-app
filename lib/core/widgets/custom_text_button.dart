@@ -1,7 +1,6 @@
 import 'package:doctor_app/core/theming/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 class CustomTextButton extends StatelessWidget {
   const CustomTextButton(

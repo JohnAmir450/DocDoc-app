@@ -12,7 +12,7 @@ class DontHaveAnAccount extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(children: [
-        const TextSpan(
+         TextSpan(
             text: 'Don\'t have an account? ',
             style: TextStyles.font14DarkBlueMedium),
         TextSpan(

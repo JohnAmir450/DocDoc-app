@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     const PasswordAndEmail(),
                     verticalSpace(20),
-                    const Align(
+                     Align(
                       alignment: Alignment.bottomRight,
                       child: Text(
                         'Forgot Password?',
