@@ -26,10 +26,28 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: "3.2.3"
+        ruby-version: "3.3.4"
         bundler-cache: true
         working-directory: android
-        
+
+    - name: Install Dependencies
+      run: |
+        cd android
+        bundle install
+
+    - name: Check Ruby and Bundler versions
+      run: |
+        ruby -v
+        bundler -v
+        bundle list
+      working-directory: android
+
+    - name: Debug Bundler
+      run: |
+        cd android
+        bundle config
+        bundle exec fastlane --version
+
     - name: Build and Distribute App
       env:
         FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
