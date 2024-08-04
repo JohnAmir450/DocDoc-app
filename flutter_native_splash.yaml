@@ -1,0 +1,15 @@
+flutter_native_splash:
+ 
+  color: "#ffffff"
+ 
+  image: assets/images/splash.png
+
+  
+  android_12:
+   image: assets/images/android_12_splash.png
+
+
+  # It's requires to but the photo in a circle with 640 width , 640 height and the radius is 320
+  # put it in a second frame with 960 width , 960 height 
+  #then export it as a png with 1x
+  # run the command  dart run flutter_native_splash:create --path=flutter_native_splash.yaml
