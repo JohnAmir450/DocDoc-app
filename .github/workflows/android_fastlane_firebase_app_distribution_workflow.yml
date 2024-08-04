@@ -62,9 +62,22 @@ jobs:
       run: |
         cat android/Gemfile
 
-    - name: Build and Distribute App
+    - name: Display Gemfile.lock Content
+      run: |
+        cat android/Gemfile.lock
+
+    - name: Check Bundler Configurations
+      run: bundle config
+      working-directory: android
+
+    - name: Debug FIREBASE_CLI_TOKEN
+      run: echo $FIREBASE_CLI_TOKEN
+      env:
+        FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
+
+    - name: Build and Distribute App with Verbose Output
       env:
         FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
       run: |
-        bundle exec fastlane android firebase_distribution
+        bundle exec fastlane android firebase_distribution --verbose
       working-directory: android
