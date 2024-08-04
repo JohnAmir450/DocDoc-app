@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout my repo code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     
     - name: Set up JDK 11
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v3
       with:
         java-version: '11'
         distribution: 'temurin'
@@ -30,6 +30,10 @@ jobs:
         bundler-cache: true
         working-directory: android
 
+    - name: Install Bundler
+      run: |
+        gem install bundler
+
     - name: Install Dependencies
       run: |
         cd android
@@ -42,7 +46,7 @@ jobs:
         bundle list
       working-directory: android
 
-    - name: Debug Bundler
+    - name: Debug Bundler Configuration
       run: |
         cd android
         bundle config
