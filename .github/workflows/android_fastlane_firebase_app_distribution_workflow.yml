@@ -31,8 +31,7 @@ jobs:
         working-directory: android
 
     - name: Install Bundler
-      run: |
-        gem install bundler
+      run: gem install bundler
 
     - name: Install Dependencies
       run: |
@@ -51,6 +50,17 @@ jobs:
         cd android
         bundle config
         bundle exec fastlane --version
+
+    - name: Check Environment Variables
+      run: printenv
+
+    - name: List Files in Android Directory
+      run: |
+        ls -al android
+
+    - name: Display Gemfile Content
+      run: |
+        cat android/Gemfile
 
     - name: Build and Distribute App
       env:
